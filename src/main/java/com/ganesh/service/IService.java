@@ -2,7 +2,7 @@ package com.ganesh.service;
 
 import java.util.Collection;
 
-public interface Service<T> {
+public interface IService<T> {
 	
 Collection<T> findAll();
 	

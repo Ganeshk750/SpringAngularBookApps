@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ganesh.model.Book;
 import com.ganesh.resource.Resource;
-import com.ganesh.service.Service;
+import com.ganesh.service.IService;
 
 @RestController
 @RequestMapping("/books")
 public class BookResourceImpl implements Resource<Book> {
 	
 	@Autowired
-	private Service<Book> bookService;
+	private IService<Book> bookService;
 
 	@Override
 	public ResponseEntity<Collection<Book>> findAll() {
