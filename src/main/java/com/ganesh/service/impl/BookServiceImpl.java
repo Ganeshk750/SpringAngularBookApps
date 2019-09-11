@@ -1,4 +1,4 @@
-package com.ganesh.service;
+package com.ganesh.service.impl;
 
 import java.util.Collection;
 
@@ -8,8 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.ganesh.model.Book;
 import com.ganesh.repository.BookRepository;
+import com.ganesh.service.IService;
 
-public class BookServiceImpl implements Service<Book>{
+import org.springframework.stereotype.Service;
+
+
+@Service
+public class BookServiceImpl implements IService<Book> {
 	
 	@Autowired
 	private BookRepository bookRepository;
@@ -40,5 +45,4 @@ public class BookServiceImpl implements Service<Book>{
 		}
 		return jsonObject.toString();
 	}
-
 }
